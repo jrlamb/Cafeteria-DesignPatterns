@@ -10,6 +10,14 @@ package pagamento;
  * @author UTFPR
  */
 public class CartaoDeCredito implements Pagamento{
+    
+    private static CartaoDeCredito instance;
+
+    public static CartaoDeCredito getInstance() {
+        if (instance == null)
+            instance = new CartaoDeCredito();                    
+        return instance;
+    }    
 
     @Override
     public void pagar() {

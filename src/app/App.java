@@ -26,7 +26,7 @@ public class App {
 
         // ja vou criar o pedido e a forma de pagamento
         Pedido p = new Pedido();
-        Pagamento pagamento = new Dinheiro();
+        Pagamento pagamento = Dinheiro.getInstance();
         
         p.addItem(cafe);
 

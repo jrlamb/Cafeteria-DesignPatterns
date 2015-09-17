@@ -10,6 +10,16 @@ package pagamento;
  * @author UTFPR
  */
 public class Dinheiro implements Pagamento {
+    
+    private static Dinheiro instance;
+
+    public static Dinheiro getInstance() {
+        if (instance ==null)
+            instance = new Dinheiro();
+        return instance;
+    }    
+    
+    private Dinheiro(){}
 
     @Override
     public void pagar() {
